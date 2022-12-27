@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block content %}
+<body class="bg-secondary">    
+    <nav class="navbar navbar-expand-md bg-info sticky-top mb-3" aria-label="Navigation bar">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler1" aria-controls="navbarToggler1" aria-expanded="false" aria-label="Hamburger menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-sm-evenly mx-2" id="navbarToggler1">
+                    <ul class="navbar-nav"><a class="navbar-brand" href="home.html">Home</a></ul>
+                    <ul class="navbar-nav"><a class="nav-link" href="projects.html">Projects</a></ul>
+                    <ul class="navbar-nav"><a class="nav-link" href="about.html">About</a></ul>
+            </div>
+            <div class="collapse navbar-collapse justify-content-sm-evenly mx-2" id="navbarToggler1">
+                    <a href="https://github.com/TcPirate1"><i class="fa-brands fa-github fa-xl text-black"></i></a>
+                    <a href="https://www.reddit.com/user/Lack0frecipes/"><i class="fa-brands fa-reddit fa-xl text-black"></i></a>
+                    <a href="https://trailblazer.me/id/terencedchen"><i class="fa-brands fa-salesforce fa-2xl text-black"></i></a>
+                    <a href="https://www.linkedin.com/in/terence-dongxu-chen"><i class="fa-brands fa-linkedin fa-xl text-black"></i></a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="text-center">
+        <img src="static/images/Image_by_vectorjuice_on_Freepik_scale.jpg" class="rounded" alt="Image by vectorjuice on Freepik">
+
+        <h1 class="text-white pt-2">Terence Chen</h1>
+        <p class="text-white">Hi, I am a Software Development Student.<br>I will be adding my projects (mostly links to their repository), including this website, to this website.<br>If I can find a better way to showcase the projects I will.</p>
+    </div>
+</body>
+{% endblock content %}
+</html>
