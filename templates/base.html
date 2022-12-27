@@ -10,6 +10,26 @@
     {% load static %}
     <title>{% block title %}{% endblock title %}</title>
 </head>
+<body class="bg-secondary">
+    <nav class="navbar navbar-expand-md bg-info sticky-top mb-3" aria-label="Navigation bar">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler1" aria-controls="navbarToggler1" aria-expanded="false" aria-label="Hamburger menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-sm-evenly mx-2" id="navbarToggler1">
+                    <ul class="navbar-nav"><a class="navbar-brand" href="{% url 'home.html' %}">Home</a></ul>
+                    <ul class="navbar-nav"><a class="nav-link" href="{% url 'projects.html' %}">Projects</a></ul>
+                    <ul class="navbar-nav"><a class="nav-link" href="{% url 'about.html' %}">About</a></ul>
+            </div>
+            <div class="collapse navbar-collapse justify-content-sm-evenly mx-2" id="navbarToggler1">
+                    <a href="https://github.com/TcPirate1"><i class="fa-brands fa-github fa-xl text-black"></i></a>
+                    <a href="https://www.reddit.com/user/Lack0frecipes/"><i class="fa-brands fa-reddit fa-xl text-black"></i></a>
+                    <a href="https://trailblazer.me/id/terencedchen"><i class="fa-brands fa-salesforce fa-2xl text-black"></i></a>
+                    <a href="https://www.linkedin.com/in/terence-dongxu-chen"><i class="fa-brands fa-linkedin fa-xl text-black"></i></a>
+            </div>
+        </div>
+    </nav>
     {% block content %}
     {% endblock content %}
+</body>
 </html>
