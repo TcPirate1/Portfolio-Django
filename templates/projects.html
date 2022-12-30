@@ -2,16 +2,40 @@
 {% block title %}Projects{% endblock title %}
 {% block content %}
 <div class="text-center text-white">
-    <h1 class="text-decoration-underline">Non-Responsive Websites</h1>
-    <p>Use Django models to list URLs</p>
+    <h1 class="text-decoration-underline">Non-Responsive Websites</h1>    
+    {% for categories in categories_list %}
+    {% if categories.category.choices == non_responsive_website %}
+        <li class="text-black"><a href="{% url 'project_detail' categories.pk %}">{{categories.Title}} using {{categories.language_framework}}</a></li>
+    {% endif %}
+    {% empty %}
+    <p>There are no projects in this category</p>
+    {% endfor %}
 
     <h1 class="text-decoration-underline">Responsive Websites</h1>
-    <p>Use Django models to list URLs</p>
+    {% if categories.category_choices == responsive_website%}
+    {% for categories in categories_list %}
+        <li class="text-black"><a href="{% url 'project_detail' categories.pk %}">{{categories.Title}} using {{categories.language_framework}}</a></li>
+        {% empty %}
+        <p>There are no projects in this category</p>
+    {% endfor %}
+    {% endif %}
 
     <h1 class="text-decoration-underline">Non-GUI programs</h1>
-    <p>Use Django models to list URLs</p>
+    {% if categories.category_choices == program_non_gui%}
+    {% for categories in categories_list %}
+        <li class="text-black"><a href="{% url 'project_detail' categories.pk %}">{{categories.Title}} using {{categories.language_framework}}</a></li>
+        {% empty %}
+        <p>There are no projects in this category</p>
+    {% endfor %}
+    {% endif %}
     
     <h1 class="text-decoration-underline">GUI programs</h1>
-    <p>Use Django models to list URLs</p>
+    {% if categories.category_choices == program_gui%}
+    {% for categories in categories_list %}
+        <li class="text-black"><a href="{% url 'project_detail' categories.pk %}">{{categories.Title}} using {{categories.language_framework}}</a></li>
+        {% empty %}
+        <p>There are no projects in this category</p>
+    {% endfor %}
+    {% endif %}
 </div>
 {% endblock content %}
