@@ -22,9 +22,10 @@ class Categories(models.Model):
         default = "empty",
         blank = False, #makes it a required field
     )
+    language_framework = models.CharField(max_length=30)
+    description = models.CharField(max_length=200)
 
     URL = models.URLField(max_length=200)
-    language_framework = models.CharField(max_length=30)
 
     def __str__(self):
         return '%s %s %s' % (self.Title, self.language_framework, self.category)
