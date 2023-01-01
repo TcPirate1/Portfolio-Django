@@ -13,7 +13,7 @@ class Categories(models.Model):
         ("empty", "EMPTY"),
         (non_responsive_website, "Website: Non-Responsive"),
         (responsive_website,"Website: Responsive"),
-        (program_gui,"Program: Non-GUI"),
+        (program_non_gui,"Program: Non-GUI"),
         (program_gui,"Program: GUI"),
     ]
     category = models.CharField(
