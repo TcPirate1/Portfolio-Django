@@ -23,9 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3u*wv13fznqji1a6w$z2&4c9n6))%lqxx^**4!p)#-om8ncnnd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+DEBUG = False
+
+ALLOWED_HOSTS = ['tcdjangosite.pythonanywhere.com']
 
 
 # Application definition
@@ -117,10 +120,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR/ 'static',
-]
-# STATIC_ROOT = "/home/tcdjangosite/Portfolio-Django/static"
+# STATICFILES_DIRS = [
+#     BASE_DIR/ 'static',
+# ]
+STATIC_ROOT = "/home/tcdjangosite/Portfolio-Django/static"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
