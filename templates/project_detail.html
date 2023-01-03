@@ -3,7 +3,8 @@
 {% block content %}
     <div class="text-center text-white">
         <h2 class="text-decoration-underline">{{categories.Title}}</h2>
-        <p class="bg-dark">{{categories.URL|urlize}}</p>
+        <p class="bg-dark text-decoration-underline">Repo URL:<br>{{categories.URL|urlize}}</p>
+        <h2 class="text-decoration-underline">Description</h2>
         <p>{{categories.description}}</p>
     </div>
 {% endblock content %}
