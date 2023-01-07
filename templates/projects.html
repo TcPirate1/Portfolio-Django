@@ -5,28 +5,28 @@
     <h1 class="text-decoration-underline">Non-Responsive Websites</h1>    
     {% for categories in categories_list %}
     {% if categories.category == "Website: Non-Responsive" %}
-        <li class="text-black"><a href="{% url 'project_detail' categories.pk %}">{{categories.Title}} using {{categories.language_framework}} {{categories.category}}</a></li>
+        <li class="text-black"><a href="{% url 'project_detail' categories.pk %}" class="link-warning">{{categories.Title}} using {{categories.language_framework}} {{categories.category}}</a></li>
     {% endif %}
     {% endfor %}
 
     <h1 class="text-decoration-underline">Responsive Websites</h1>
     {% for categories in categories_list %}
     {% if categories.category == "Website: Responsive" %}
-        <li class="text-black"><a href="{% url 'project_detail' categories.pk %}">{{categories.Title}} using {{categories.language_framework}}</a></li>
+        <li class="text-black"><a href="{% url 'project_detail' categories.pk %}" class="link-warning">{{categories.Title}} using {{categories.language_framework}}</a></li>
     {% endif %}
     {% endfor %}
 
     <h1 class="text-decoration-underline">Non-GUI programs</h1>
     {% for categories in categories_list %}
     {% if categories.category == "Program: Non-GUI" %}
-        <li class="text-black"><a href="{% url 'project_detail' categories.pk %}">{{categories.Title}} using {{categories.language_framework}}</a></li>
+        <li class="text-black"><a href="{% url 'project_detail' categories.pk %}" class="link-warning">{{categories.Title}} using {{categories.language_framework}}</a></li>
     {% endif %}
     {% endfor %}
     
     <h1 class="text-decoration-underline">GUI programs</h1>
     {% for categories in categories_list %}
     {% if categories.category == "Program: GUI" %}
-        <li class="text-black"><a href="{% url 'project_detail' categories.pk %}">{{categories.Title}} using {{categories.language_framework}}</a></li>
+        <li class="text-black"><a href="{% url 'project_detail' categories.pk %}" class="link-warning">{{categories.Title}} using {{categories.language_framework}}</a></li>
     {% endif %}
     {% endfor %}
 </div>

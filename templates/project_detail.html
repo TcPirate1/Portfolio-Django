@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
+{% load custom_tags %}
 {% block title %}{{categories.Title}}{% endblock title %}
 {% block content %}
     <div class="text-center text-white">
         <h2 class="text-decoration-underline">{{categories.Title}}</h2>
-        <p class="bg-dark text-decoration-underline">Repo URL:<br>{{categories.URL|urlize}}</p>
+        <p class="bg-dark text-decoration-underline">Repo URL:<br>{{categories.URL|urlize|a_tag}}</p>
         <h2 class="text-decoration-underline">Description</h2>
         <p>{{categories.description}}</p>
     </div>
