@@ -23,7 +23,8 @@ class Categories(models.Model):
         blank = False, #makes it a required field
     )
     language_framework = models.CharField(max_length=30)
-    description = models.CharField(max_length=200)
+    description = models.CharField(max_length=1500)
+    image = models.ImageField(upload_to="media/", height_field=500, width_field=500, max_length=None)
 
     URL = models.URLField(max_length=200)
 

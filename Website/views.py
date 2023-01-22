@@ -15,6 +15,8 @@ class projectsView(ListView):
 class projectsDetail(DetailView):
     model = Categories
     template_name = "project_detail.html"
+    def display_image(request):
+        getImages = Categories.image.objects.all()
 
 class aboutView(TemplateView):
     template_name = "about.html"
