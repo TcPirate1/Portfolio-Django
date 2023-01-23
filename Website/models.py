@@ -24,7 +24,7 @@ class Categories(models.Model):
     )
     language_framework = models.CharField(max_length=30)
     description = models.CharField(max_length=1500)
-    image = models.ImageField(upload_to="media/", height_field=500, width_field=500, max_length=None)
+    image = models.ImageField(upload_to="images/", max_length=None) #height_field and width_field do not accept direct int values
 
     URL = models.URLField(max_length=200)
 
