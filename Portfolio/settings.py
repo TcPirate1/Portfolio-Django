@@ -26,12 +26,12 @@ load_dotenv(find_dotenv())
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
-ALLOWED_HOSTS = []
-# DEBUG = False
+# ALLOWED_HOSTS = []
+DEBUG = False
 
-# ALLOWED_HOSTS = ['tcdjangosite.pythonanywhere.com']
+ALLOWED_HOSTS = ['tcdjangosite.pythonanywhere.com']
 
 
 # Application definition
