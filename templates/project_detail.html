@@ -2,11 +2,15 @@
 {% load custom_tags %}
 {% block title %}{{categories.Title}}{% endblock title %}
 {% block content %}
-    <div class="text-center text-white">
+    <div class="text-center text-white d-flex flex-column align-items-center">
         <h2 class="text-decoration-underline">{{categories.Title}}</h2>
         <p class="bg-dark text-decoration-underline">Repo URL:<br>{{categories.URL|urlize|a_tag}}</p>
         <h2 class="text-decoration-underline">Description</h2>
         <p>{{categories.description}}</p>
+        {% if categories.image %}
         <img src="{{categories.image.url}}" alt="Image of the project">
+        {% else %}
+        <p class="text-white p-1 border border-4 border-dark">There is no image here at the moment</p>
+        {% endif %}
     </div>
 {% endblock content %}
