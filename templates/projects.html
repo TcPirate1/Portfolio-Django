@@ -4,28 +4,28 @@
 <div class="text-center text-white">
     <h1 class="text-decoration-underline">Non-Responsive Websites</h1>    
     {% for categories in categories_list %}
-    {% if categories.category == "Website: Non-Responsive" %}
-        <li class="text-black"><a href="{% url 'project_detail' categories.pk %}" class="link-warning">{{categories.Title}} using {{categories.language_framework}} {{categories.category}}</a></li>
+    {% if categories.category == categories.non_responsive_website %}
+        <li class="text-black"><a href="{% url 'project_detail' categories.pk %}" class="link-warning">{{categories.Title}} using {{categories.language_framework}}</a></li>
     {% endif %}
     {% endfor %}
 
     <h1 class="text-decoration-underline">Responsive Websites</h1>
     {% for categories in categories_list %}
-    {% if categories.category == "Website: Responsive" %}
+    {% if categories.category == categories.responsive_website %}
         <li class="text-black"><a href="{% url 'project_detail' categories.pk %}" class="link-warning">{{categories.Title}} using {{categories.language_framework}}</a></li>
     {% endif %}
     {% endfor %}
 
     <h1 class="text-decoration-underline">Non-GUI programs</h1>
     {% for categories in categories_list %}
-    {% if categories.category == "Program: Non-GUI" %}
+    {% if categories.category == categories.program_non_gui %}
         <li class="text-black"><a href="{% url 'project_detail' categories.pk %}" class="link-warning">{{categories.Title}} using {{categories.language_framework}}</a></li>
     {% endif %}
     {% endfor %}
     
     <h1 class="text-decoration-underline">GUI programs</h1>
     {% for categories in categories_list %}
-    {% if categories.category == "Program: GUI" %}
+    {% if categories.category == categories.program_gui %}
         <li class="text-black"><a href="{% url 'project_detail' categories.pk %}" class="link-warning">{{categories.Title}} using {{categories.language_framework}}</a></li>
     {% endif %}
     {% endfor %}
