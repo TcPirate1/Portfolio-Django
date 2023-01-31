@@ -4,11 +4,11 @@
 {% block content %}
     <div class="text-center text-white d-flex flex-column align-items-center">
         <h2 class="text-decoration-underline">{{categories.Title}}</h2>
-        <p class="bg-dark text-decoration-underline">Repo URL:<br>{{categories.URL|urlize|a_tag}}</p>
+        <p class="bg-dark text-decoration-underline px-2 pb-1">Repo URL:<br>{{categories.URL|urlize|a_tag}}</p>
         <h2 class="text-decoration-underline">Description</h2>
-        <p>{{categories.description}}</p>
+        <p class ="w-50">{{categories.description}}</p>
         {% if categories.image %}
-        <img src="{{categories.image.url}}" alt="Image of the project">
+        <img class="rounded" src="{{categories.image.url}}" alt="Image of the project">
         {% else %}
         <p class="text-white p-1 border border-4 border-dark">There is no image here at the moment</p>
         {% endif %}
