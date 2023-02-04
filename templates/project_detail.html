@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load custom_tags %}
+{% block metadescription %}A page that is dynamically produced for whichever link in the Projects page that the user selects.{% endblock metadescription %}
 {% block title %}{{categories.Title}}{% endblock title %}
 {% block content %}
     <div class="text-center text-white d-flex flex-column align-items-center">

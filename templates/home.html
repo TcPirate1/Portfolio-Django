@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
-{% block metadescription %}This is to test if it works{% endblock metadescription %}
+{% block metadescription %}An introductory page describing the content that can be found on the other pages.{% endblock metadescription %}
 {% block title %}TC's Portfolio Page{% endblock title %}
 {% block content %}
 <div class="text-center">
     <img src="/static/images/Image_by_vectorjuice_on_Freepik_scale.jpg" class="rounded" alt="Image by vectorjuice on Freepik">
 
     <h1 class="text-white pt-2">Terence Chen</h1>
-    <p class="text-white">Hi, I am a Software Development Student.<br>I will be adding my projects (mostly links to their repository), including this website, to this website.<br>If I can find a better way to showcase the projects I will.</p>
+    <p class="text-white">Hi, I am a Software Development Student.<br>This website is an overhaul of my old one (although it is still active) and is designed to be an easy way to link Github repositories so people do not spend too much time sniffling thorugh my Github account.<br>This site will include only my public repositories so that everyone can see them but it does not mean that they are "finished".<br>This website's repo will also be included in the <a class="text-white bg-black p-1" href="{% url 'projects' %}">Projects</a> page.<br><br>Lastly thank you for taking the time to check my site out!</p>
 </div>
 {% endblock content %}
 </html>
